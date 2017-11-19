@@ -1,0 +1,19 @@
+/* body {
+    background: url("../assets/backgrounds/80-background.jpg");
+    background-position: center 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}*/ 
+
+#login, #signup{
+    padding: 5%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
