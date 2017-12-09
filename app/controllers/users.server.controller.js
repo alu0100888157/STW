@@ -14,7 +14,9 @@ exports.create = function(req, res, next) {
 };
 // find multiple user documents
 exports.list = function(req, res, next) {
-    User.find({}, (err, users) => {
+    User.find({}, 'username email', {
+        limit: 10
+    }, (err, users) => {
         if (err) {
             return next(err);
         } else {
