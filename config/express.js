@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 
 module.exports = function() {
     const app = express();
-
+    // Configure environment
     if (process.env.NODE_ENV === 'development') {
         app.use(morgan('dev'));
     } else if (process.env.NODE_ENV === 'production') {
@@ -17,7 +17,10 @@ module.exports = function() {
     }));
     app.use(bodyParser.json());
     app.use(methodOverride());
-    
+    // configure application view
+    app.set('views', './app/views');
+    app.set('view engine', 'ejs');
+
     require('../app/routes/index.server.routes.js')(app);
 
     return app
