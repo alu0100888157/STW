@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 
 module.exports = function() {
+    // Create the express application
     const app = express();
     // Configure environment
     if (process.env.NODE_ENV === 'development') {
@@ -29,8 +30,9 @@ module.exports = function() {
     // configure application view
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
-
+    // bootstrap the express application
     require('../app/routes/index.server.routes.js')(app);
+    require('../app/routes/users.server.routes.js')(app);
 
     app.use(express.static('./public'));
 
