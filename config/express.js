@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
+const flash = require('connect-flash');
 
 module.exports = function() {
     // Create the express application
@@ -31,7 +32,8 @@ module.exports = function() {
     // configure application view
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
-
+    // register the Connect-Flash module
+    app.use(flash());
     // register the Passport middleware in the express application
     app.use(passport.initialize());
     app.use(passport.session());
