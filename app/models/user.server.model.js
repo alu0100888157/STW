@@ -4,14 +4,27 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     firstName: String,
     lastName: String,
-    email: String,
+    email: {
+        type: String,
+        index: true, // secondary index
+        match: /.\@.+\..+/
+    },
     username: {
         type: String,
         // predifined modifiers
         trim: true, // remove whitespaces
-        unique: true
+        unique: true,
+        required: true
     },
-    password: String,
+    password: { 
+        type: String,
+        validate: [
+            function(password) {
+                return password.length >= 6;
+            },
+            'Password should be longer' // pass the error message to the callback
+        ]
+    },
     // default values
     created: {
         type: Date,
@@ -27,5 +40,10 @@ UserSchema.virtual('fullName').get(function() {
     this.firstName = splitName[0] || '';
     this.lastName = splitName[1] || '';
 });
+
+// Post middlewares
+UserSchema.post('save', function(next) {
+    console.log('The user "' + this.username + '" details were saved.');
+})
 
 mongoose.model('User', UserSchema);
