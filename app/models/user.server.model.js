@@ -17,4 +17,14 @@ const UserSchema = new Schema({
         default: Date.now
     }
 });
+
+// Virtual attributes
+UserSchema.virtual('fullName').get(function() {
+    return this.firstName + ' ' + this.lastName;
+}).set(function(fullName) {
+    const splitName = fullName.split(' ');
+    this.firstName = splitName[0] || '';
+    this.lastName = splitName[1] || '';
+});
+
 mongoose.model('User', UserSchema);
