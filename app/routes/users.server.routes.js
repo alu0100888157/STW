@@ -16,6 +16,19 @@ module.exports = function(app) {
     }));
 
     app.get('/signout', users.signout);
+
+    // WIRING PASSPOR'S FACEBOOK STRATEGY ROUTES ******************************************
+    // start the user authentication process.
+    app.get('/oauth/facebook', passport.authenticate('facebook', {
+        failureRedirect: '/signin'
+    }));
+    // finish the authentication process once the user has linked their
+    // facebook profile.
+    app.get('/oauth/facebook/callback', passport.authenticate('facebook',
+    {
+        failureRedirect: '/signin',
+        successRedirect: '/'
+    }));
     
     app.route('/users')
     .post(users.create)
