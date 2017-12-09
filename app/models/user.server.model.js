@@ -8,7 +8,8 @@ const UserSchema = new Schema({
     username: {
         type: String,
         // predifined modifiers
-        trim: true // remove whitespaces
+        trim: true, // remove whitespaces
+        unique: true
     },
     password: String,
     // default values
