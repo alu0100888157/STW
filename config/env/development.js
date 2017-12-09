@@ -10,5 +10,10 @@ module.exports = {
         // redirect to that URL after the authentication process is over. Make sure the callbackURL
         // property matches the callback settings that you've set in the developer's home page.
         callbackURL: 'http://localhost:3000/oauth/facebook/callback'
+    },
+    twitter: {
+        clientID: 'Application Id',
+        clientSecret: 'Application Secret',
+        callbackURL: 'http://localhost:3000/oauth/twitter/callback'
     }
 };
