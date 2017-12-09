@@ -5,6 +5,7 @@ const compress = require('compression');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const passport = require('passport');
 
 module.exports = function() {
     // Create the express application
@@ -30,6 +31,10 @@ module.exports = function() {
     // configure application view
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
+
+    // register the Passport middleware in the express application
+    app.use(passport.initialize());
+    app.use(passport.session());
     // bootstrap the express application
     require('../app/routes/index.server.routes.js')(app);
     require('../app/routes/users.server.routes.js')(app);
