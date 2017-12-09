@@ -24,3 +24,23 @@ exports.list = function(req, res, next) {
         }
     });
 };
+
+exports.read = function(req, res) {
+    res.json(req.user);
+};
+
+// reading a single user document using findOne()
+// userByID method. Middleware to deal with the manipulation
+// of single documents when performing CRUD operations.
+exports.userByID = function(req, res, next, id) {
+    User.findOne({
+        _id: id
+    }, (err, user) => {
+        if (err) {
+            return next(err);
+        } else {
+            req.user = user;
+            next();
+        }
+    });
+};
