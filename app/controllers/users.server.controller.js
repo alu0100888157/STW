@@ -26,6 +26,12 @@ exports.list = function(req, res, next) {
     });
 };
 
+/* read method responds with a JSON representation of the req.user object, but
+what is creating the req.user object? the userById() method is the one responsible
+for populating the req.user object. You will use the userById() method as a 
+middleware to deal with the manipulation of single documents when performing read,
+delete, and update operations.
+*/
 exports.read = function(req, res) {
     res.json(req.user);
 };
@@ -120,10 +126,11 @@ exports.signup = function(req, res, next) {
         user.save((err) => {
             if (err) {
                 const message = getErrorMessage(err);
-
+                // read messages written to the flash
                 req.flash('error', message);
                 return res.redirect('/signup');
             }
+            // create user session
             req.login(user, (err) => {
                 if (err) return next(err);
                 return res.redirect('/');

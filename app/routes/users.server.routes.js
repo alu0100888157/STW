@@ -1,3 +1,4 @@
+// ROUTING FILE
 const users = require('../../app/controllers/users.server.controller');
 const passport = require('passport');
 
@@ -54,14 +55,21 @@ module.exports = function(app) {
         successRedirect: '/'
     }));
     
-    app.route('/users')
-    .post(users.create)
-    .get(users.list);
+    // app.route('/users')
+    // .post(users.create)
+    // .get(users.list);
+    
+    /*
+        In Express, adding a colon before a substring in a route definition means
+        that this substring will be handled as a request parameter. To handle the
+        population of the req.user object, you use the app.param() method, which
+        defines a middleware to be executed before any other middleware that uses
+        that parameter.
+    */
+    // app.route('/users/:userId')
+    // .get(users.read)
+    // .put(users.update)
+    // .delete(users.delete);
 
-    app.route('/users/:userId')
-    .get(users.read)
-    .put(users.update)
-    .delete(users.delete);
-
-    app.param('userId', users.userByID);
+    // app.param('userId', users.userByID);
 };

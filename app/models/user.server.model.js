@@ -107,9 +107,10 @@ UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
 };
 
 // (*1)
-UserSchema.set('toJSON', { 
-    setters: true, 
+UserSchema.set('toJSON', {
+    getters: true, 
+    // setters: true, 
     virtuals: true 
 });
-
+// Use the schema instance to define your User model
 mongoose.model('User', UserSchema);
