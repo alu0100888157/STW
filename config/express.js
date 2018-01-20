@@ -39,14 +39,16 @@ module.exports = function() {
     // register the Passport middleware in the express application
     app.use(passport.initialize());
     app.use(passport.session());
+    // Serving static file
+    app.use(express.static('./public'));
+    app.use('/lib', express.static(
+        path.resolve('./node_modules')));
     // bootstrap the express application
     // It requires the routing file and calls it as a function, passing it
     // the application instance to create a new routing configuration, and then
     // it will call the controller's render() method.
-    require('../app/routes/index.server.routes.js')(app);
     require('../app/routes/users.server.routes.js')(app);
-    // Serving static file
-    app.use(express.static('./public'));
+    require('../app/routes/index.server.routes.js')(app);
     // return the application instance
     return app
 };
