@@ -49,6 +49,7 @@ module.exports = function() {
     // the application instance to create a new routing configuration, and then
     // it will call the controller's render() method.
     require('../app/routes/users.server.routes.js')(app);
+    require('../app/routes/articles.server.routes')(app);
     require('../app/routes/index.server.routes.js')(app);
     // return the application instance
     return app
