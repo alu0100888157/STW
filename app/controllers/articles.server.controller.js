@@ -112,3 +112,16 @@ exports.delete = function(req, res) {
         }
     });
 };
+
+// Create a new controller middleware that is used to authorize an article operation 
+exports.hasAuthorization = function(req, res, next) {
+    // If the current user is not the creator of the article send the appropriate error message
+    if (req.article.creator.id !== req.user.id) {
+        return res.status(403).send({
+            message: 'User is not authorized'
+        });
+    }
+
+    // Call the next middleware
+    next();
+};
