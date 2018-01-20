@@ -1,4 +1,5 @@
 // File to configure the Express application
+const path = require('path');
 const config = require('./config');
 const express = require('express');
 const morgan = require('morgan'); // morgan: provides a simple logger middleware.
