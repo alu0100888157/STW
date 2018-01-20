@@ -7,7 +7,7 @@ import { AuthenticationService } from '../authentication.service';
     selector: 'signup',
     templateUrl: 'app/authentication/signup/signup.template.html'
 })
-export class SigninComponent {
+export class SignupComponent {
     errorMessage: string;
     user: any = {};
 

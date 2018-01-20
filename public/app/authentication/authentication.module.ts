@@ -10,7 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 @NgModule ({
     imports: [
         FormsModule,
-        RouterModule.forChild(AuthenticateRoutes),
+        RouterModule.forChild(AuthenticationRoutes),
     ],
     declarations: [
         AuthenticationComponent,
