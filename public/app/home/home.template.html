@@ -1,6 +1,8 @@
 <div *ngIf="user">
     <h1>Hello {{user.firstName}}</h1>
     <a href="/api/auth/signout">Signout</a>
+    <li><a [routerLink]="['/articles']">List Articles</a></li>
+    <li><a [routerLink]="['/articles/create']">Create Article</a></li>
 </div>
 
 <div *ngIf="!user">
