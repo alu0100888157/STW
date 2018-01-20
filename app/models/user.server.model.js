@@ -75,7 +75,7 @@ UserSchema.pre('save', function(next) {
 /* which is used to hash a password string by utilizing Node.js, crypto module.
 */
 UserSchema.methods.hashPassword = function(password) {
-    return crypto.pbkdf2Sync(password, this.salt, 10000, 64).toString('base64');
+    return crypto.pbkdf2Sync(password, this.salt, 10000, 64, 'sha512').toString('base64');
 };
 // authenticate() instance method
 /* which accepts a string argument, hashes it, and compares it to the current
