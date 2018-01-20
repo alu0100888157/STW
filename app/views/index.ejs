@@ -2,15 +2,24 @@
 <html>
     <head>
         <title><%= title %></title>
+        <base href="/">
     </head>
     <body>
-        <% if ( userFullName ) { %>
-            <h2>Hello <%=userFullName%></h2>
-            <a href="/signout">Sign out</a>
-        <% } else { %>
-            <a href="/signup">Signup</a>
-            <a href="/signin">Sigin</a>
-        <% } %>
-        <h1><%= title %></h1>
+        <mean-app>
+            <h1>Loading...</h1>
+        </mean-app>
+        <!-- scripts -->
+        <!-- Load our modules files directly from the node_modules -->
+        <script src="lib/core-js/client/shim.min.js"></script>
+        <script src="lib/zone.js/dist/zone.js"></script>
+        <script src="lib/reflect-metadata/Reflect.js"></script>
+        <script src="lib/systemjs/dist/system.js"></script>
+
+        <script src="systemjs.config.js"></script>
+        <script>
+            // Tells SystemJS to load the application package we defined
+            // in the configuration file.
+            System.import('app').catch(function(err){ console.error(err); });
+        </script>
     </body>
 </html>
