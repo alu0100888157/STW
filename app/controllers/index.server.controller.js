@@ -1,16 +1,12 @@
 exports.render = function(req, res) {
-
-    // The session middleware adds a session object to all request objects
-    // in your application.
-    if (req.session.lastVisit) {
-        console.log(req.session.lastVisit);
-    }
-    
-    req.session.lastVisit = new Date();
-    // render function
-    // first argument: name of your EJS template
+    // RENDERING THE USER OBJECT
+    const user = (!req.user) ? null : {
+        _id: req.user.id,
+        firtName: req.user.firstName,
+        lastName: req.user.lastName
+    };
     res.render('index', {
         title: 'Hello world',
-        userFullName: req.user ? req.user.fullName : ''
+        user: JSON.stringify(user)
     });
 };
