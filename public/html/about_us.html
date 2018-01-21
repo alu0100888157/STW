@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="es">
+  <head>
+    <!-- Le decimos al navegador que la página web está optimizada para moviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--CSS-->
+    <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css"  media="screen,projection"/>
+    
+    <link media="screen" href="../assets/css/STW.css" type="text/css" rel="stylesheet">
+    
+  </head>
+  <body class="grey darken-4 odyssey">
+    <!-- Menu Navegador -->
+   <nav>
+      <div class="nav-wrapper black center-on-small-only">
+        <a href="inicio.html" class="brand-logo">Stewie</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"> 
+            <i class="material-icons">menu</i></a>           
+            <ul role=”menubar” class="right hide-on-med-and-down">
+              <li><a href="STWjuegos.html">Juegos</a></li>
+              <li><a href="destacados.html">Destacados</a></li>
+              <li><a href="noticias.html">Noticias</a></li>
+              <li><a href="gameplays.html">Gameplays</a></li>
+              <li><a href="about_us.html">About us</a></li>
+              <li><a href="#">Salir</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li role=”menuitem”><a href="/" tabindex="-1">Inicio</a></li>
+            <li role=”menuitem”><a href="destacados.html" tabindex="-1">Destacados</a></li>
+            <li role=”menuitem”><a href="noticias.html" tabindex="-1">Noticias</a></li>
+            <li role=”menuitem”><a href="gameplays.html" tabindex="-1">Gameplays</a></li>
+            <li role=”menuitem”><a href="about_us.html" tabindex="-1">About us</a></li>
+            <li role=”menuitem”><a href="#" tabindex="-1">Salir</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12"> 
+          <div class="card-panel foro">
+            <div class="central">
+
+              <!-- Informacion Central -->
+
+              <h3 class="center grey-text text-darken-2"><strong tabindex="0">About Us</strong></h3><hr><br>
+              
+              <ul class="collection">
+                <li class="collection-item avatar">
+                  <img src="../assets/img/javi.png" alt="imagen alumno Javier" class="circle">
+                  <span class="title">JAVIER ANTONIO GONZÁLEZ HERNÁNDEZ</span>
+                  <p><b>Correo:</b> javier@stw.hol.es</p>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../assets/img/cristian.jpg" alt="imagen alumno cristian" class="circle">
+                  <span class="title">CRISTIAN MANUEL ÁNGEL DÍAZ</span>
+                  <p><b>Correo:</b> cristian@stw.hol.es</p>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../assets/img/angel.jpg" alt="imagen alumno angel" class="circle">
+                  <span class="title">ÁNGEL LUIS MORALES HERNÁNDEZ</span>
+                  <p><b>Correo:</b> angel@stw.hol.es</p>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../assets/img/oscar.jpg" alt="imagen alumno oscar" class="circle">
+                  <span class="title">ÓSCAR JESÚS SOCAS GONZÁLEZ</span>
+                  <p><b>Correo:</b> oscar@stw.hol.es</p>
+                </li>
+              </ul>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card grey darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title">Información de los creadores:</span>
+                    <p> 
+                      Somos cuatro estudiantes de Ingeniera informática de Cuarto Año en la Universidad de La Laguna.
+                      <br>
+                      La página en la que estáis corresponde al trabajo final de la asignatura <b>Sistemas y Tecnologías Web.</b>
+                      <br>
+                      Respecto a la Universidad de La Laguna (ULL), es una universidad pública situada en la ciudad de San Cristóbal de La Laguna, en Tenerife (España). Para más imformación visite la web de la ULL
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://www.ull.es/" target="_blank">Web de la ULL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      		</div>     
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <footer class="page-footer grey darken-4">
+    <div class="container">
+              
+      <div class="footer-copyright">
+        <div class="container">
+            <b>ADDRESS</b> 500 Terry Francois Street San Francisco, CA 94158
+          <div class="grey-text text-lighten-4 right"><b>TEL</b> 123-456-7890</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".button-collapse").sideNav();
+      });
+    </script>
+    <script type="text/javascript" src="../js/javascript.js"></script>
+  </body>
+</html>
+      

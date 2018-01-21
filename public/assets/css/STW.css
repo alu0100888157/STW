@@ -1,0 +1,71 @@
+@font-face {
+	font-family: retro;
+	src:url(retro.ttf)
+}
+
+@font-face {
+	font-family: PTSansBold;
+	src:url(PTSansBold.ttf)
+}
+
+.retro {
+	font-family: retro;
+}
+
+.odyssey {
+	font-family: PTSansBold;
+}
+.tabla a:link {
+	color: #4CAF50;
+
+}
+.tabla a:visited {
+	color: #8BC34A;
+}
+.about_us{
+	background-color: #F5F5F5;
+}
+.central a:hover {
+	color: #F03724;
+}
+.central a:visited{
+	color: #031430;
+}
+
+.parallax-container {
+  min-height: 280px;
+  max-height: 600px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+  
+
+
+
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+nav{
+	background-color: #004D40;
+}
+#capa, #capa2, #capa3, #capa4{
+	color: red;
+	
+}
+
+
+/*a:visited { */
+/*    color:  ;*/
+/*}*/

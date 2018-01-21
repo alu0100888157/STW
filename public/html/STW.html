@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>STEWIE</title>
+    <meta charset="UTF-8">
+    <!-- Le decimos al navegador que la página web está optimizada para moviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--CSS-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    
+    <link media="screen" href="../css/STW.css" type="text/css" rel="stylesheet">
+    
+  </head>
+
+  <body class="grey darken-4 odyssey">
+    
+    <nav>
+      <div class="nav-wrapper black center-on-small-only">
+        <a href="#" class="brand-logo left">Stewie</a>
+        <!--a href="#" data-activates="mobile-demo" class="button-collapse"> 
+        <i class="material-icons">menu</i></a>     
+        
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Destacados</a></li>
+          <li><a href="#">Categorías</a></li>
+          <li><a href="#">Juegos</a></li>
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Salir</a></li>
+        </ul>
+        
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="sass.html">Inicio</a></li>
+          <li><a href="badges.html">Destacados</a></li>
+          <li><a href="collapsible.html">Categorías</a></li>
+          <li><a href="collapsible.html">Juegos</a></li>
+          <li><a href="collapsible.html">Chat</a></li>
+          <li><a href="collapsible.html">About us</a></li>
+        </ul-->
+        
+      </div>
+    </nav>
+    
+    
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container"> <!--Presentación-->
+          <br><br><br>
+          <h2 class="retro header purple-text center">Un portal al Mundo de los Videojuegos</h2>
+          <div class="row center">
+          </div>
+  
+          <br><br>
+          
+        </div>
+      </div>
+      <div class="parallax"><img src="../img/retrowall.jpg" alt="retro image"></div>
+    </div> 
+    <br><br>
+    <br><br>
+
+    
+  <div class="container">
+    <div class="row">        
+      <div class="col s12 m4 l4 center">
+        <h6 class="white-text">Entrar al portal STEWIE</h6><br>
+        <!-- Modal Structure -->
+        <form action="/signin" onsubmit="return Verifica2();" action="" method="post">  
+          <input class=" white-text" type="text" name="nombre-usuario" placeholder="Nombre de usuario" id="nombre-usuario">
+          <input class=" white-text" type="password" name="password" placeholder="Contraseña" id="password">        
+          <button class="left btn waves-effect waves-light  indigo darken-3" type="submit" name="action">Acceder
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+      <div class="center col s12 m7 l7 offset-m1 offset-l1">
+        <div class="carousel carousel-slider">
+          <a class=" carousel-item"><h2>Juegos</h2><img src="../img/juegos.png"></a>
+          <a class=" carousel-item"><h2>Foros</h2><img src="../img/foros.jpg"></a>
+        </div>
+      </div>
+    </div>
+        <div class="row">        
+
+      <div class="col s12 left">
+
+        <br><br>
+        <!-- Modal Trigger -->
+        <a class=" indigo darken-3 waves-effect waves-light btn modal-trigger" href="#modal1">Registrarse</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <form action="/signin" onsubmit="return Verifica2();" action="" method="post">  
+              <input class=" black-text" type="text" name="nombre" placeholder="Nombre" id="nombre">
+              <input class=" black-text" type="text" name="apellidos" placeholder="Apellidos" id="apellido">
+              <input class=" black-text" type="text" name="nombre-usuario" placeholder="Nombre de usuario" id="nombre-usuario">
+              <input class=" black-text" type="email" name="email" placeholder="Correo" id="email">
+              <input class=" black-text" type="password" name="password" placeholder="Contraseña" id="password">        
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Registrarse</a>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  
+  <div class="collapsible-header active"><i class="material-icons">place</i>Second</div>
+      <div align="center"> <table style="margin:0 0 10px 0; width:244px; background:#fff; border:1px solid #F3F3F3;" cellspacing="0" cellpadding="0"><tr><td style="font-family:verdana; font-size:11px; color:#000; padding:5px 5px;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="640" height="480"><param name="movie" value="http://www.games68.com/games/game-1466418144.swf"><param name="quality" value="high"></param><param name="menu" value="false"></param><embed src="http://www.games68.com/games/game-1466418144.swf" width="640" height="480" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" menu="false" wmode="direct"></embed></object></td></tr><tr><td style="font-family:verdana; font-size:11px; padding:5px 10px; border-top:1px solid #F3F3F3;" align="center"><strong><a href="http://www.games68.com/games.php?id=5000148" target="_blank">Running Warrior</a></strong> |  <a href="http://www.games68.com">juego</a> con <a href="http://www.games68.com">Games68.com</a></td></tr></table></div>
+    
+    <footer class="page-footer grey darken-4">
+            <div class="container">
+                
+            <div class="footer-copyright">
+                <div class="container">
+                    <b>ADDRESS</b> 500 Terry Francois Street San Francisco, CA 94158
+                <div class="grey-text text-lighten-4 right"><b>TEL</b> 123-456-7890</div>
+                </div>
+            </div>
+        </footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+   
+    <script type="text/javascript" src="../js/javascript.js"></script>
+
+  </body>
+</html>
+      
