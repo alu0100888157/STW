@@ -1,14 +1,29 @@
-<form (ngSubmit)="signin()">
-    <div>
-        <label>Username:</label>
-        <input type="text" [(ngModel)] = "credentials.username" name="username">
-    </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" [(ngModel)] = "credentials.password" name="password">
-    </div>
-    <div>
-        <input type="submit" value="Sign In">
-    </div>
-    <span>{{errorMessage}}</span>
-</form>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+      
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="../../../assets/css/layout.css" />  
+    <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+</head>
+
+<body>
+            <form (ngSubmit)="signin()">
+                    <div class="input-file col s6">
+                        <label>Nombre de usuario:</label>
+                        <input type="text" [(ngModel)] = "credentials.username" name="username" class="validate" required="required" length="20"/>
+                    </div>
+                    <div input-field>
+                        <label>Contraseña:</label>
+                        <input type="password" [(ngModel)] = "credentials.password" name="password" class="validate" required="required"/>
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign In">
+                    </div>
+                    <span>{{errorMessage}}</span>
+                </form>
+    </body>

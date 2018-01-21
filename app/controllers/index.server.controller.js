@@ -6,7 +6,7 @@ exports.render = function(req, res) {
         lastName: req.user.lastName
     };
     res.render('index', {
-        title: 'Hello world',
+        title: 'Stewie',
         user: JSON.stringify(user)
     });
 };
