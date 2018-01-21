@@ -20,21 +20,21 @@ export class ArticlesService {
 	
 	read(articleId: string): Observable<any> {
 		return this._http
-			.get('${this._baseURL}/${articleId}')
+			.get(`${this._baseURL}/${articleId}`)
 			.map((res: Response) => res.json())
 			.catch(this.handleError);
 	}
 
 	update(article: any): Observable<any> {
 		return this._http
-			.put('${this._baseURL}/${article._id}', article)
+			.put(`${this._baseURL}/${article._id}`, article)
 			.map((res: Response) => res.json())
 			.catch(this.handleError);
   	}
 
 	delete(articleId: any): Observable<any> {
 		return this._http
-			.delete('${this._baseURL}/${articleId}')
+			.delete(`${this._baseURL}/${articleId}`)
 			.map((res: Response) => res.json())
 			.catch(this.handleError);
 	}	
