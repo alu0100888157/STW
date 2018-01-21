@@ -1,13 +1,50 @@
-<h1>Articles</h1>
-<ul>
-	<li *ngFor="let article of articles">
-		<a [routerLink]="['/articles', article._id]">{{article.title}}</a>
-		<br>
-		<small>{{article.created}}/{{article.creator.fullName}}</small>
-		<p>{{article.content}}</p>
-	</li>
-</ul>
+<head>    
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
 
-<div *ngIf="articles && articles.length === 0">
-	No articles yet, why don't you <a [routerLink]="['/articles/create']">create one</a>? 
-</div>
+	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+        <nav class="nav-extended darken-4 odyssey">
+                <div class="nav-wrapper black center-on-small-only">
+                <a href="inicio.html" class="brand-logo">Stewie</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"> 
+                    <i class="material-icons">menu</i></a>           
+                    <ul role=”menubar” class="right hide-on-med-and-down">
+                        <li><a href="../../../html/STWjuegos.html">Juegos</a></li>
+                        <li><a href="../../../html/destacados.html">Destacados</a></li>
+                        <li><a [routerLink]="['/articles']">Noticias</a></li>
+                        <li><a href="../../../html/gameplays.html">Gameplays</a></li>
+                        <li><a href="../../../html/about_us.html">About us</a></li>
+                        <li><a href="/api/auth/signout">Cerrar sesión</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                    <li role=”menuitem” *ngIf="!user"><a href="STWjuegos.html" tabindex="-1">Inicio</a></li>
+                    <li role=”menuitem”><a href="destacados.html" tabindex="-1">Destacados</a></li>
+                    <li role=”menuitem”><a href="noticias.html" tabindex="-1">Noticias</a></li>
+                    <li role=”menuitem”><a href="gameplays.html" tabindex="-1">Gameplays</a></li>
+                    <li role=”menuitem”><a href="about_us.html" tabindex="-1">About us</a></li>
+                    <li role=”menuitem” *ngIf="!user"><a [routerLink]="['/authentication/signup']" tabindex="-1">Signup</a></li>
+                    </ul>
+                </div>
+            </nav>
+		<li><a [routerLink]="['/articles/create']">Crea un artículo</a></li>
+			<h1>Artículos</h1>
+		<ul>
+		<li *ngFor="let article of articles">
+			<a [routerLink]="['/articles', article._id]">{{article.title}}</a>
+		<br>
+			<small>{{article.created}}/{{article.creator.fullName}}</small>
+			<p>{{article.content}}</p>
+		</li>
+	</ul>
+
+	<div *ngIf="articles && articles.length === 0">
+		No hay artículos ¿Por qué no <a [routerLink]="['/articles/create']">creas uno</a>? 
+	</div>
+    </body>
