@@ -1,31 +1,38 @@
 <head>    
-	<!-- Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+		<!-- Materialize CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+		
+		<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
 	
-	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<h1>Nuevo artículo</h1>
-<form (ngSubmit)="create()" novalidate>
-	<div>
-		<label for="title">Título</label>
-		<div>
-			<input type="text" required [(ngModel)]="article.title" name="title" placeholder="Title">
+	<body>
+		<h1 class="center">Nuevo artículo</h1>
+		<div class="container">
+			<form (ngSubmit)="create()" novalidate>
+				<div>
+					<label for="title">Título</label>
+					<div>
+						<input type="text" required [(ngModel)]="article.title" name="title">
+					</div>
+				</div>
+				<div>
+					<label for="content">Contenido</label>
+					<div>
+						<textarea type="text" required cols="30" rows="20" [(ngModel)]="article.content" name="content"></textarea>
+					</div>
+				</div>
+				<div>
+					<input class="waves-effect waves-light btn" type="submit" value="Crear artículo">
+				</div>
+				
+				<strong id="error">{{errorMessage}}</strong>
+			</form>
+			<br>
+			<a class="waves-effect waves-light btn" [routerLink]="['/articles']">Volver a artículos</a>
 		</div>
-	</div>
-	<div>
-		<label for="content">Contenido</label>
-		<div>
-			<textarea type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
-		</div>
-	</div>
-	<div>
-		<input type="submit">
-	</div>
- 
-	<strong id="error">{{errorMessage}}</strong>
-</form>
+	</body>

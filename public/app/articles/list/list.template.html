@@ -12,21 +12,21 @@
 <body>
         <nav class="nav-extended darken-4 odyssey">
                 <div class="nav-wrapper black center-on-small-only">
-                <a href="inicio.html" class="brand-logo">Stewie</a>
+                <a href="/" class="brand-logo">Stewie</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"> 
                     <i class="material-icons">menu</i></a>           
                     <ul role=”menubar” class="right hide-on-med-and-down">
+                        <li><a [routerLink]="['/articles']">Artículos</a></li>
                         <li><a href="../../../html/STWjuegos.html">Juegos</a></li>
                         <li><a href="../../../html/destacados.html">Destacados</a></li>
-                        <li><a [routerLink]="['/articles']">Noticias</a></li>
                         <li><a href="../../../html/gameplays.html">Gameplays</a></li>
                         <li><a href="../../../html/about_us.html">About us</a></li>
                         <li><a href="/api/auth/signout">Cerrar sesión</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
+                    <li><a [routerLink]="['/articles']">Artículos</a></li>
                     <li role=”menuitem” *ngIf="!user"><a href="STWjuegos.html" tabindex="-1">Inicio</a></li>
                     <li role=”menuitem”><a href="destacados.html" tabindex="-1">Destacados</a></li>
-                    <li role=”menuitem”><a href="noticias.html" tabindex="-1">Noticias</a></li>
                     <li role=”menuitem”><a href="gameplays.html" tabindex="-1">Gameplays</a></li>
                     <li role=”menuitem”><a href="about_us.html" tabindex="-1">About us</a></li>
                     <li role=”menuitem” *ngIf="!user"><a [routerLink]="['/authentication/signup']" tabindex="-1">Signup</a></li>
@@ -34,8 +34,8 @@
                 </div>
             </nav>
         <br><br>
-		<li><a class="waves-effect waves-light btn" [routerLink]="['/articles/create']">Crea un artículo</a></li>
-			<h1 class="center">Artículos</h1>
+            <h1 class="center">Artículos</h1>
+            <a class="center waves-effect waves-light btn" [routerLink]="['/articles/create']">Crea un artículo</a>
 	<div class="container">
         <ul>
     		<li *ngFor="let article of articles">
