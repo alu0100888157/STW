@@ -52,7 +52,7 @@ Para realizar la conexión de mongo en node se necesita de la librería mongoose
 
 Angular es un framework de JavaScript de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página. Su objetivo es aumentar las aplicaciones basadas en navegador con capacidad de Modelo Vista Controlador (MVC), en un esfuerzo para hacer que el desarrollo y las pruebas sean más fáciles.
 
-### MATERIALIZE [![Materialize-logo](http://www.lavishingdesign.com/img/Tech/matireial.png)](http://materializecss.com/)
+### MATERIALIZE [![Materialize-logo](https://codigofacilito.com/system/courses/white_avatars/000/000/076/thumb/materialize.png?1461776253)](http://materializecss.com/)
 
 Framework de CSS responsivo desarrollado por google y basado en material design.
 
