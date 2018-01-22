@@ -2,7 +2,9 @@
 const mongoose = require('mongoose');
 const Article = mongoose.model('Article');
 
-// Create a new error handling controller method
+/**
+ *  Create a new error handling controller method
+ */
 const getErrorMessage = function(err) {
     if (err.errors) {
         for (const errName in err.errors) {
@@ -13,7 +15,9 @@ const getErrorMessage = function(err) {
     }
 };
 
-// Create a new controller method that creates new articles
+/**
+ *  Create a new controller method that creates new articles
+ */
 exports.create = function(req, res) {
     // Create a new article object
     const article = new Article(req.body);
@@ -35,7 +39,9 @@ exports.create = function(req, res) {
     });
 };
 
-// Create a new controller method that retrieves a list of articles
+/**
+ *  Create a new controller method that retrieves a list of articles
+ */
 exports.list = function(req, res) {
     // Use the model 'find' method to get a list of articles
     Article.find().sort('-created').populate('creator', 'firstName lastName fullName').exec((err, articles) => {
@@ -51,7 +57,9 @@ exports.list = function(req, res) {
     });
 };
 
-// Create a new controller middleware that retrieves a single existing article
+/**
+ *  Create a new controller middleware that retrieves a single existing article
+ */
 exports.articleByID = function(req, res, next, id) {
     // Use the model 'findById' method to find a single article 
     Article.findById(id).populate('creator', 'firstName lastName fullName').exec((err, article) => {
@@ -66,12 +74,16 @@ exports.articleByID = function(req, res, next, id) {
     });
 };
 
-// Create a new controller method that returns an existing article
+/**
+ *  Create a new controller method that returns an existing article
+ */
 exports.read = function(req, res) {
     res.json(req.article);
 };
 
-// Create a new controller method that updates an existing article
+/**
+ *  Create a new controller method that updates an existing article
+ */
 exports.update = function(req, res) {
     // Get the article from the 'request' object
     const article = req.article;
@@ -94,7 +106,9 @@ exports.update = function(req, res) {
     });
 };
 
-// Create a new controller method that delete an existing article
+/** 
+ * Create a new controller method that delete an existing article
+ */
 exports.delete = function(req, res) {
     // Get the article from the 'request' object
     const article = req.article;
@@ -113,7 +127,9 @@ exports.delete = function(req, res) {
     });
 };
 
-// Create a new controller middleware that is used to authorize an article operation 
+/**
+ *  Create a new controller middleware that is used to authorize an article operation 
+ */
 exports.hasAuthorization = function(req, res, next) {
     // If the current user is not the creator of the article send the appropriate error message
     if (req.article.creator.id !== req.user.id) {
