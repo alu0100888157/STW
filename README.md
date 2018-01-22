@@ -1,5 +1,9 @@
 # PROYECTO DE SISTEMAS Y TECNOLOGÍAS WEB
 
+# STEWIE
+
+Stewie es un portal web orientado al mundo de los videojuegos, en el cual puedes jugar a múltiples minijuegos, ver gameplays de dichos juegos, etc.
+
 # Enlaces
 
 * [Documentación.](https://javiergonher.github.io/stw-project/)
