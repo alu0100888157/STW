@@ -34,7 +34,7 @@ Para finalizar la parte de Angular este grupo le aplico estilo a cada una de las
 
 Durante el desarrollo de la aplicación el equipo se reunio varias veces para comentar que se había llevado a cabo hasta ese momento, intercambiar ideas para mejorar diferentes partes y resolver problemas graves que no era posible resolver comunicandonos a través de telegram o skype, como problemas a la hora de conectar el front-end y el back-end. Este tipo de reuniones han permitido que todos los miembros del equipo entiendan todas las tecnologías que conforman la pila MEAN.
 
-Para colaborar en el desarrollo del código se ha usado github.
+Para colaborar en el desarrollo del código se ha usado github. Se han usado dos rama, una master para las versiones estables del proyecto y una desarrollo donde se iban añadiendo y probando nuevas funcionalidades.
 
 # Problemas durante el desarrollo del proyecto
 
