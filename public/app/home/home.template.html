@@ -18,9 +18,9 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"> 
                     <i class="material-icons">menu</i></a>           
                     <ul role=”menubar” class="right hide-on-med-and-down">
+                        <li *ngIf="user"><a [routerLink]="['/articles']">Artículos</a></li>
                         <li *ngIf="user"><a href="../../../html/STWjuegos.html">Juegos</a></li>
                         <li *ngIf="user"><a href="../../../html/destacados.html">Destacados</a></li>
-                        <li *ngIf="user"><a [routerLink]="['/articles']">Artículos</a></li>
                         <li *ngIf="user"><a href="../../../html/gameplays.html">Gameplays</a></li>
                         <li *ngIf="user"><a href="../../../html/about_us.html">About us</a></li>
                         <li *ngIf="user"><a href="/api/auth/signout">Cerrar sesión</a></li>

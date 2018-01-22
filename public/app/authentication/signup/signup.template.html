@@ -1,26 +1,43 @@
-<form (ngSubmit)="signup()">
-    <div>
-        <label>First Name:</label>
-        <input type="text" [(ngModel)]="user.firstName" name="firstName">
-    </div>
-    <div>
-        <label>Last Name:</label>
-        <input type="text" [(ngModel)]="user.lastName" name="lastName">
-    </div>
-    <div>
-        <label>Email:</label>
-        <input type="text" [(ngModel)]="user.email" name="email">
-    </div>
-    <div>
-        <label>Username:</label>
-        <input type="text" [(ngModel)]="user.username" name="username">
-    </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" [(ngModel)]="user.password" name="password">
-    </div>
-    <div>
-        <input type="submit" value="Sign up"/>
-    </div>
-    <span>{{errorMessage}}</span>
-</form>
+<head>
+      
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+</head>
+
+<body>
+<br><br>
+    <div class="container grey darken-4 white-text">
+
+        <form (ngSubmit)="signup()">
+            <div>
+                <label>First Name:</label>
+                <input type="text" [(ngModel)]="user.firstName" name="firstName">
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" [(ngModel)]="user.lastName" name="lastName">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" [(ngModel)]="user.email" name="email">
+            </div>
+            <div>
+                <label>Username:</label>
+                <input type="text" [(ngModel)]="user.username" name="username">
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" [(ngModel)]="user.password" name="password">
+            </div>
+            <div>
+                <input type="submit" value="Sign up"/>
+            </div>
+            <span>{{errorMessage}}</span>
+        </form>
+    </div><br><br>
+</body>

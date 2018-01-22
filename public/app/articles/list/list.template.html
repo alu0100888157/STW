@@ -33,18 +33,21 @@
                     </ul>
                 </div>
             </nav>
-		<li><a [routerLink]="['/articles/create']">Crea un artículo</a></li>
-			<h1>Artículos</h1>
-		<ul>
-		<li *ngFor="let article of articles">
-			<a [routerLink]="['/articles', article._id]">{{article.title}}</a>
-		<br>
-			<small>{{article.created}}/{{article.creator.fullName}}</small>
-			<p>{{article.content}}</p>
-		</li>
-	</ul>
-
+        <br><br>
+		<li><a class="waves-effect waves-light btn" [routerLink]="['/articles/create']">Crea un artículo</a></li>
+			<h1 class="center">Artículos</h1>
+	<div class="container">
+        <ul>
+    		<li *ngFor="let article of articles">
+    			<a [routerLink]="['/articles', article._id]">{{article.title}}</a>
+    		<br>
+    			<small>{{article.created}}/{{article.creator.fullName}}</small>
+    			<p>{{article.content}}</p>
+    		</li>
+    	</ul>
+    </div>
 	<div *ngIf="articles && articles.length === 0">
 		No hay artículos ¿Por qué no <a [routerLink]="['/articles/create']">creas uno</a>? 
 	</div>
+    
     </body>
