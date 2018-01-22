@@ -6,7 +6,8 @@ import { ArticlesService } from '../articles.service';
 
 @Component({
   selector: 'edit',
-  templateUrl: 'app/articles/edit/edit.template.html'
+  templateUrl: 'app/articles/edit/edit.template.html',
+  styleUrls: ['../../../assets/css/layoutarticle.css'],
 })
 export class EditComponent {
 	article: any = {};

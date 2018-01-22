@@ -1,13 +1,26 @@
-<section *ngIf="article && article.creator">
-	<h1>{{article.title}}</h1>
+<head>    
+		<!-- Materialize CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+	
+		<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
 
-	<div *ngIf="allowEdit">
-	    <a [routerLink]="['/articles', article._id, 'edit']">edit</a>
-	    <button (click)="delete()">delete</button>
-	</div>
+<section class="center" *ngIf="article && article.creator">
+	<h1>{{article.title}}</h1>
 	<small>
 	    <em>Posted on {{article.created}} by {{article.creator.fullName}}</em>
 	</small>
 
 	<p>{{article.content}}</p>
+	<div *ngIf="allowEdit">
+	    <a class="waves-effect waves-light btn" [routerLink]="['/articles', article._id, 'edit']">Editar artículo</a>
+		<button class="waves-effect waves-light btn" (click)="delete()">Borrar artículo</button>
+	</div>
+	<br>
+	<a class="waves-effect waves-light btn" [routerLink]="['/articles']">Volver a artículos</a>
 </section>
