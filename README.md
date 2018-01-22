@@ -17,7 +17,7 @@ Para ejecutar el proyecto se siguen los siguientes pasos.
 
 4. En la raíz del proyecto ejecutar `npm install` y `npm start` para ejecutar el servidor.
 
-5. Abrir el navegdor e ir a la dirección `localhost:3000`
+5. Abrir el navegador e ir a la dirección `localhost:3000`
 
 ## Tecnologías
 
