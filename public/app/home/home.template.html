@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="es">
     <head>    
         <!-- Materialize CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
@@ -36,7 +38,90 @@
                 </div>
             </nav>
 
-        <div *ngIf="user">
+
+        <div *ngIf="!user" id="index-banner" class="parallax-container">
+          <div class="section no-pad-bot">
+            <div class="container"> <!--Presentación-->
+                <div id="titulo">
+                    <br><br><br>
+                    <h2 class="retro header purple-text center">Un portal al Mundo de los Videojuegos</h2>
+              
+                    <div class="row"></div>
+      
+                    <br><br>  
+
+                </div>
+                <br><br>
+               
+                <div class="col s12 m6 offset-m3">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Stewie</span>
+                      <p>Stewie es un portal web orientado al mundo de los videojuegos, en el cual no sólo puedes jugar a múltiples minijuegos sino que incluso, ver gameplays de dichos juegos, ver noticias de actualidad del mundo gamer, etc.</p>
+                    </div>
+                    
+                  </div>
+              
+                </div>
+                <br><br>
+            </div>
+          </div>
+        
+
+        </div> 
+        
+       <br><br><br><br>
+        
+        <br><br>
+
+
+        <div class="container white-text center" *ngIf="user">
             <h1>Bienvenido {{user.firstName}}</h1>
+            <div class="col s12 m6 offset-m3">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Stewie</span>
+                      <p>Bienvenido a Stewie. Se encuentra ante un portal creado por alumnos de Cuarto Año de la Universidad de La Laguna. Esto es un proyecto para la asignatura Sistemas y Tecnologías Web. Para empezar a usar la página simplemente tiene que acceder a la pestaña "Juegos"</p>
+                    </div>
+                    
+                  </div>
+              
+                </div>
+                <br><br><br><br><br><br><br><br>
         </div>
+    
+
+        <footer class="page-footer grey darken-4">
+            <div class="container">
+                
+            <div class="footer-copyright">
+                <div class="container">
+                    <b>ADDRESS</b> 500 Terry Francois Street San Francisco, CA 94158
+                <div class="grey-text text-lighten-4 right"><b>TEL</b> 123-456-7890</div>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--script type="text/javascript" src="../../assets/js/materialize.min.js"></script-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   
+    <script type="text/javascript" src="../../assets/js/javascript.js"></script>
+
+   
+     
+<style> 
+    #titulo{
+        background-image: url("http://www.sumandovalor.cl/app/webroot/img/content/rubros/13/fondo/org-fondo-madera-negro.jpg");
+
+
+    }
+
+</style> 
+
+
+
     </body>
+</html>
