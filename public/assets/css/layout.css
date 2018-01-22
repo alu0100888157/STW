@@ -5,7 +5,15 @@
     background-repeat: no-repeat;
 }*/ 
 
-#login, #signup{
+h1 {
+    margin: auto;
+    font-size: 150%;
+    color: white;
+}
+
+form {
+    margin: auto;
+    width: 35%;
     padding: 5%;
 }
 

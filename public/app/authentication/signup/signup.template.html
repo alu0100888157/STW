@@ -11,31 +11,31 @@
 
 <body>
 <br><br>
-    <div class="container grey darken-4 white-text">
-
+    <div class="container grey darken-4">
+        <h5 class="white-text">Registro</h5>
         <form (ngSubmit)="signup()">
-            <div>
-                <label>First Name:</label>
+            <div class="white-text">
+                <label>Nombre:</label>
                 <input type="text" [(ngModel)]="user.firstName" name="firstName">
             </div>
-            <div>
-                <label>Last Name:</label>
+            <div class="white-text">
+                <label>Apellidos:</label>
                 <input type="text" [(ngModel)]="user.lastName" name="lastName">
             </div>
-            <div>
+            <div class="white-text">
                 <label>Email:</label>
                 <input type="text" [(ngModel)]="user.email" name="email">
             </div>
-            <div>
-                <label>Username:</label>
+            <div class="white-text">
+                <label>Nombre de usuario:</label>
                 <input type="text" [(ngModel)]="user.username" name="username">
             </div>
-            <div>
+            <div class="white-text">
                 <label>Password:</label>
                 <input type="password" [(ngModel)]="user.password" name="password">
             </div>
             <div>
-                <input type="submit" value="Sign up"/>
+                <input type="submit" value="Registrarse"/>
             </div>
             <span>{{errorMessage}}</span>
         </form>

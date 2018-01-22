@@ -1,5 +1,4 @@
 <head>
-      
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
@@ -9,23 +8,24 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 </head>
 
-<body class="grey darken-4 white-text">
+<body class="grey darken-4">
     <div class="container">
         <br><br>
         <br><br><br><br><br><br>
+        <h1>Inicio de sesión</h1>
             <form class="text-aling center"(ngSubmit)="signin()">
-                    <div class="input-file col s6">
+                    <div class="input-file col s6 white-text">
                         <label>Nombre de usuario:</label>
                         <input type="text" [(ngModel)] = "credentials.username" name="username" class="validate" required="required" length="20"/>
                     </div>
-                    <div input-field>
+                    <div class="white-text">
                         <label>Contraseña:</label>
                         <input type="password" [(ngModel)] = "credentials.password" name="password" class="validate" required="required"/>
                     </div>
                     <div>
-                        <input type="submit" value="Sign In">
+                        <input type="submit" value="Iniciar sesión">
                     </div>
                     <span>{{errorMessage}}</span>
                 </form>
-        </div><br><br>
+        </div>
     </body>

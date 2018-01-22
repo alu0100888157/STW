@@ -5,7 +5,8 @@ import { AuthenticationService } from '../authentication.service';
 
 @Component({
     selector: 'signin',
-    templateUrl: 'app/authentication/signin/signin.template.html'
+    templateUrl: 'app/authentication/signin/signin.template.html',
+    styleUrls: ['../../../assets/css/layout.css'],
 })
 export class SigninComponent {
     errorMessage: string;
